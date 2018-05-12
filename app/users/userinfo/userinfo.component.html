@@ -1,0 +1,52 @@
+
+<br>
+<br>
+<br>
+<h3 *ngIf="!user">Please select a user to check the details</h3>
+<div class="row" *ngIf="user" style="margin: auto;">
+    <div class="col-sm-3 col-md-5">
+      <div class="thumbnail">
+        <img src="{{user.img}}" alt="{{user.name}}" style="border-radius: 20pt; border-style: inset; border-color: khaki;">
+        <div class="caption">
+          <br>
+          <h3>{{user.name}}</h3>
+          <p>{{user.Description}}</p>
+         
+          <p><a href="#" class="btn btn-primary" role="button">Send Message</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3 col-md-6" style="margin-left: 10pt;">
+      
+        <label><h3>Star Ratings :</h3></label> <span *ngFor="let number of starList" [ngClass]="number== true ? 'fa fa-star checked' : 'fa fa-star'" style="font-size: xx-large;"></span>
+        
+     
+      <br>
+      <hr>
+
+      <table class="table table-bordered">
+          <thead>
+            <tr>
+             
+              <th scope="col">Likes</th>
+              <th scope="col">Dislikes</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            
+              <tr *ngFor="let like of user.Likes; let i=index">
+                <td>{{like}}</td>
+                <td *ngIf="user.Dislikes.length<=user.Likes.length">{{user.Dislikes[i]}}</td>
+              </tr>
+             
+          </tbody>
+          
+        </table>
+
+        
+      
+    </div>
+  </div>
+

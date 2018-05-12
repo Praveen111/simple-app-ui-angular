@@ -1,0 +1,52 @@
+
+<div class="container">
+
+<nav class="navbar navbar-light">
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" list="myusers">
+       <datalist id="myusers">
+         <option *ngFor="let user of users">{{user.name}}</option>
+       </datalist>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="search" (keyup)="search($event.target.value)">Search</button>
+     </form>
+      
+
+
+      <div class="dropdown">
+          <label><b>Username : </b></label>
+          <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="http://www.fillmurray.com/200/200" style="width: 25pt; height:25pt;" >
+            
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenu2" >
+            <!-- <button class="dropdown-item" type="button">Action</button> -->
+            <ul class="list-group">
+              
+                <li class="list-group-item" *ngFor="let user of users" style="cursor: pointer;">{{user.name}}</li>
+                
+              </ul>
+          </div>
+        </div>
+
+        
+
+</nav>
+
+
+
+
+
+<br>
+
+
+
+
+<!-- <div id="abc" style="display: flex;"> -->
+<div class="left-bar">
+        <app-users [users]="users"></app-users>
+      </div>
+<div class="content-bar">
+  <app-userinfo></app-userinfo>
+</div>
+</div>
+<!-- </div> -->

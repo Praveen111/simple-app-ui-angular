@@ -1,0 +1,34 @@
+.bg-light {
+    background-color: #b9cadc;
+}
+
+li.list-group-item {
+    text-align: center
+}
+
+div.content-bar {
+    width: 800px;
+    max-width: 800px;
+    margin-left: auto;
+    border-color: cornsilk;
+    border-style: groove;
+    background-color: indianred;
+}
+
+div.left-bar {
+  
+    width: 256px;
+    max-width: 270px;
+    height: -webkit-fill-available;
+    background-color: lightblue;
+}
+
+nav.navbar.navbar-light {
+    background-color: #e3f2fd
+}
+
+.left-bar {
+    width: 25%;
+    height: 100%;
+    float: left;
+}

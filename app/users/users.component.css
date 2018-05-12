@@ -1,0 +1,12 @@
+/* ul.list-group {
+    border-style: outset;
+} */
+
+a.list-group-item.list-group-item-info :hover {
+text-decoration-color: blueviolet
+}
+
+li:hover {
+    background-color: darkred;
+    text-decoration: bisque
+}

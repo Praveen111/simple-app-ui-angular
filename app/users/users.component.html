@@ -1,0 +1,14 @@
+<br>
+
+<!-- <ul class="list-group">
+  
+  <a class="list-group-item list-group-item-info" *ngFor="let user of users" style="cursor:pointer" (click)="showPerson(user)">{{user.name}}</a>
+</ul> -->
+
+<div class="users">
+<ul style="list-style-type: none;">
+
+  <li *ngFor="let user of users" style="cursor:pointer" (click)="showPerson(user)">{{user.name}}</li>
+<hr/>
+</ul>
+</div>
